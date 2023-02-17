@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": [
+            "ESNext"
+        ],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "commonjs",
+        "rootDir": "/",
+        "baseUrl": "./",
+        "paths": {},
+        "typeRoots": [
+            "./node_modules/@types",
+            "@types"
+        ],
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "outDir": "build",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictPropertyInitialization": false,
+        "skipLibCheck": true
+    }
+}
