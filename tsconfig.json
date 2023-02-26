@@ -9,14 +9,24 @@
         "module": "commonjs",
         "rootDir": "/",
         "baseUrl": "./",
-        "paths": {},
+        "paths": {
+            "@config/*": [
+                "src/config/*"
+            ],
+            "@modules/*": [
+                "src/modules/*"
+            ],
+            "@shared/*": [
+                "src/shared/*"
+            ]
+        },
         "typeRoots": [
             "./node_modules/@types",
             "@types"
         ],
         "resolveJsonModule": true,
         "allowJs": true,
-        "outDir": "build",
+        "outDir": "dist",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,

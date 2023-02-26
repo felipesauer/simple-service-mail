@@ -1,2 +1,8 @@
 node_modules/
 .vscode/
+build/
+temp/
+.env
+/tests/.env.development
+dist/
+coverage/
