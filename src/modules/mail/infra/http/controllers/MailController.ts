@@ -7,21 +7,7 @@ class MailController {
         content: ISendMail,
         callback: (args: object) => Promise<void>,
     ) {
-        try {
-            const response = await new SendMailService().execute(
-                server,
-                content,
-            );
-            await callback({
-                message: "Email triggered successfully",
-                statusCode: 201,
-                ...response,
-            });
-        } catch (error) {
-            await callback({
-                message: error,
-            });
-        }
+        await new SendMailService().execute(server, content, callback);
     }
 }
 
