@@ -7,7 +7,7 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "typeorm-ts-node-esm -d ./src/shared/infra/database/typeorm/DataSource",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
-    "test": "jest --no-cache",
+    "test": "jest",
     "test-app-integration-mock": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules tests/AppIntegrationMock.ts"
   },
   "repository": {
@@ -30,6 +30,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.21.0",
     "@types/amqplib": "^0.10.1",
+    "@types/jest": "^29.4.0",
     "@types/joi": "^17.2.3",
     "@types/nodemailer": "^6.4.7",
     "@typescript-eslint/eslint-plugin": "^5.52.0",

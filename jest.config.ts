@@ -1,4 +1,4 @@
-import { pathsToModuleNameMapper } from "ts-jest/";
+import { pathsToModuleNameMapper } from "ts-jest";
 import { compilerOptions } from "./tsconfig.json";
 
 /*
@@ -23,31 +23,7 @@ export default {
     collectCoverage: true,
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    collectCoverageFrom: [
-        "<rootDir>/src/shared/cache/**/*.ts",
-        "<rootDir>/src/shared/infra/**/*.ts",
-        "<rootDir>/src/shared/providers/**/*.ts",
-
-        "!<rootDir>/src/shared/cache/index.ts",
-        "!<rootDir>/src/shared/cache/models/*.ts",
-        "!<rootDir>/src/shared/cache/redis/container/*.ts",
-        "!<rootDir>/src/shared/cache/__tests__/mocks/*.ts",
-
-        "!<rootDir>/src/shared/container/*.ts",
-        "!<rootDir>/src/shared/errors/*.ts",
-
-        "!<rootDir>/src/shared/infra/http/models/*.ts",
-        "!<rootDir>/src/shared/infra/http/express/routes/*.ts",
-        "!<rootDir>/src/shared/infra/http/express/Express.ts",
-
-        "!<rootDir>/src/shared/infra/database/**/*.ts",
-
-        "!<rootDir>/src/shared/providers/token/models/*.ts",
-        "!<rootDir>/src/shared/providers/token/index.ts",
-
-        "!<rootDir>/src/shared/providers/hash/models/*.ts",
-        "!<rootDir>/src/shared/providers/hash/index.ts",
-    ],
+    collectCoverageFrom: [],
 
     // The directory where Jest should output its coverage files
     coverageDirectory: "coverage",
@@ -168,7 +144,7 @@ export default {
     // snapshotSerializers: [],
 
     // The test environment that will be used for testing
-    testEnvironment: "node",
+    // testEnvironment: "jest-environment-node",
 
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
@@ -194,12 +170,13 @@ export default {
     // testRunner: "jest-circus/runner",
 
     // A map from regular expressions to paths to transformers
-    transform: {
-        "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest",
-    },
+    // transform: undefined,
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-    transformIgnorePatterns: ["node_modules/(?!variables/.*)"],
+    // transformIgnorePatterns: [
+    //   "/node_modules/",
+    //   "\\.pnp\\.[^\\/]+$"
+    // ],
 
     // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
     // unmockedModulePathPatterns: undefined,
