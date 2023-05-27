@@ -23,7 +23,17 @@ export default {
     collectCoverage: true,
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    collectCoverageFrom: [],
+    collectCoverageFrom: [
+        "<rootDir>/src/modules/mail/services/*.ts",
+        "<rootDir>/src/shared/errors/**/*.ts",
+        "<rootDir>/src/shared/infra/**/*.ts",
+        "<rootDir>/src/shared/providers/**/*.ts",
+
+        "!<rootDir>/src/shared/infra/messages/models/*.ts",
+        "!<rootDir>/src/shared/infra/messages/rabbitmq/**/*.ts",
+
+        "!<rootDir>/src/shared/providers/mail/models/*.ts",
+    ],
 
     // The directory where Jest should output its coverage files
     coverageDirectory: "coverage",
