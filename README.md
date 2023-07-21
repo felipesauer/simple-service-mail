@@ -1,20 +1,31 @@
-# Simple Service Mail
+<div align="center">
+    <h2>Simple Service Mail</h2>
+    <p>Um serviço simples que consulta as filas do RabbitMQ em busca de dados para o envio de e-mails.</p>
+</div>
 
-O objetivo do serviço é proporcionar um ambiente de estudo onde eu aplico algumas habilidades adquiridas em cursos.
+<div align="center">
+  <p>
+    <a href="https://github.com/felipesauer/" target="_blank">Github</a>&nbsp;&nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/felipe-sauer/" target="_blank">Linkedin</a>&nbsp;&nbsp;|&nbsp;
+    <a href="https://www.instagram.com/felipesauer.dev/" target="_blank">Instagram</a>
+  </p>
+</div>
 
-## 🚀 Começando
+<div align="center">
+    <h3>Principais tecnologias usadas</h3>
+</div>
 
-Estas instruções permitirão que você obtenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Consulte a seção **[Implantação](#-implantação)** para saber como implantar o projeto.
+<div align="center" style="display: flex; align-items: center; justify-content: center;">
+    <img src="https://img.shields.io/badge/NODEJS-^v18.14.0-339933?style=for-the-badge&logo=nodedotjs">
+    <img src="https://img.shields.io/badge/BABEL-^7.21.0-f5da55?style=for-the-badge&logo=babel">
+    <img src="https://img.shields.io/badge/ESLINT-^8.34.0-4B32C3?style=for-the-badge&logo=eslint">
+    <img src="https://img.shields.io/badge/JEST-^29.4.3-15c213?style=for-the-badge&logo=jest">
+    <img src="https://img.shields.io/badge/TYPESCRIPT-^4.9.5-3178c6?style=for-the-badge&logo=typescript">
+</div>
 
-### 📋 Pré-requisitos
+<br>
 
-Certifique-se de ter as seguintes versões mínimas instaladas:
-
-- ![badge](https://img.shields.io/badge/NODEJS-≥v18.14.0-339933?style=for-the-badge&logo=nodedotjs)
-- ![badge](https://img.shields.io/badge/rabbitmq-%E2%89%A5v3.11-FF6600?style=for-the-badge&logo=rabbitmq)
-- ![badge](https://img.shields.io/badge/NPM-≥v9.3.1-CB3837?style=for-the-badge&logo=npm)
-
-### 🔧 Instalação
+## Instalação
 
 Siga as etapas abaixo para configurar o projeto:
 
@@ -36,17 +47,7 @@ cd simple-service-mail
 npm install
 ```
 
-4. Renomeie o arquivo **.env.exemplo** para **.env** e preencha as informações necessárias de configuração:
-
-```properties
-# Server AMQP
-MESSAGE_AMQP_HOSTNAME=#hotname configurado no rabbitmq
-MESSAGE_AMQP_PORT=#port do rabbitmq
-MESSAGE_AMQP_USERNAME=
-MESSAGE_AMQP_PASSWORD=
-MESSAGE_AMQP_EXCHANGE=
-MESSAGE_AMQP_REPLYTO=
-```
+4. Renomeie o arquivo **.env.exemplo** para **.env** e preencha as informações necessárias da configuração.
 
 5. Após configurar o arquivo **.env**, execute o seguinte comando para iniciar o servidor de desenvolvimento:
 
@@ -54,35 +55,11 @@ MESSAGE_AMQP_REPLYTO=
 npm run dev
 ```
 
-## ⚙️ Executando os testes
+6. Na raiz do projeto dentro da pasta **service-mock-send**, está disponível **service-mock-send.js** para envio de dados ao **simple-service-mail**, com o propósito de realizar testes.
 
-Os testes são organizados da seguinte forma:
+<br>
 
-```
-├── src
-|   └── modules
-│       └── mail/
-│           └── domail/**/*.ts
-|           └── infra/**/*.ts
-|           └── services/**/*.ts
-|   └── shared
-|       └── errors/*.ts
-|       └── infra/messages/**/*.ts
-|       └── providers
-|           └── mail/**/*.ts
-```
-
-Execute os **testes** com o seguinte comando:
-
-```
-npm run test
-```
-
-Após a execução, será gerada uma pasta chamada **coverage** na raiz do projeto. A cobertura dos testes da aplicação pode ser visualizada abrindo o arquivo **index.html** dentro da pasta **coverage**:
-
-Dentro da pasta `test/**` existe um serviço mock para envio de email para o simple-service-mail para fins de teste.
-
-## 📦 Implantação
+## Implantação
 
 Para implantar o serviço em um ambiente de produção, você deve gerar o build da mesma. Execute o seguinte comando:
 
@@ -94,28 +71,16 @@ Uma pasta chamada **dist** será criada na raiz do projeto. Essa é a versão pa
 
 **Observação:** O arquivo **.env** deve ser movido manualmente para o ambiente de produção.
 
-## 🖇️ Colaborando
-
-Este projeto está aberto para colaboração de qualquer pessoa.
-
-## ✒️ Autores
-
-* **Felipe Sauer** - *Autor* - [felipesauer](https://github.com/felipesauer)
-
-## 📄 Licença
+## Licença
 
 Este projeto está licenciado sob a licença [MIT](https://github.com/felipesauer/simple-service-mail/blob/main/LICENSE).
 
-## 🛠️ Construído com
+<br>
 
-- [RabbitMq](https://www.rabbitmq.com/) - Usado para mensageiria com comunicação assíncrona
-- [Node.js](https://nodejs.org/en/) - Usado para interpretar o JavaScript/TypeScript
-- [TypeScript](https://www.typescriptlang.org/) - Sim ❤️
-- [Jest](https://jestjs.io/pt-BR/) - Usado para realizar testes na aplicação
-- [Babel](https://babeljs.io/) - Usado para converter o código TypeScript em JavaScript
-- Joi & Celebrate - Ambos usados para controle nos parâmetros
-
-Existem outras ferramentas/bibliotecas utilizadas no projeto, mas as mencionadas acima são as principais.
-
----
-⌨️ com ❤️ por [Felipe Sauer](https://github.com/felipesauer) 😊
+<div align="center">
+  <p>
+    <a href="https://github.com/felipesauer/" target="_blank">Github</a>&nbsp;&nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/felipe-sauer/" target="_blank">Linkedin</a>&nbsp;&nbsp;|&nbsp;
+    <a href="https://www.instagram.com/felipesauer.dev/" target="_blank">Instagram</a>
+  </p>
+</div>
