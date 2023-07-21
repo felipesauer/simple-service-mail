@@ -55,7 +55,7 @@ npm install
 npm run dev
 ```
 
-6. Na raiz do projeto dentro da pasta **service-mock-send**, está disponível **service-mock-send.js** para envio de dados ao **simple-service-mail**, com o propósito de realizar testes.
+6. Na raiz do projeto dentro da pasta **service-mock-send**, está disponível **service-mock-send.ts** para envio de dados ao **simple-service-mail**, com o propósito de realizar testes.
 
 <br>
 
